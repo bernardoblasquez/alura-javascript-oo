@@ -1,7 +1,4 @@
 export class Cliente {
-    nome;
-    _cpf;
-   // conta;
 
    constructor(nome, cpf){
        this.nome = nome;
