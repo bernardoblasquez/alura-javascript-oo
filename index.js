@@ -9,10 +9,6 @@ diretor.cadastrarSenha("12345");
 const estaLogado = SistemaAutenticacao.login(diretor, "12345");
 console.log(`diretor está logado: ${estaLogado}`);
 
-
-
-
-
 const cliente = new Cliente("Alice", 55666867, "12345XX");
 const estaLogado03 = SistemaAutenticacao.login(cliente, "12345XX");
 
