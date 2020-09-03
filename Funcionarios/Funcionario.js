@@ -12,6 +12,10 @@ export class Funcionario{
         return this._senha;
     }
 
+    autenticar(senha){
+        return senha == this.senha;
+    }
+
     cadastrarSenha(senha){
         this._senha = senha;
     }
