@@ -1,11 +1,23 @@
 /*
     Ser autenticável significa ter a o método senha
+
+    duck type: não interessa o tipo do objeto que estou passando. O importante é 
+    ele possuir os métodos ou propriedades desejadas
 */
 
 export class  SistemaAutenticacao{
     
     static login (autenticavel, senha){
-        return autenticavel.autenticar(senha);
+        if (SistemaAutenticacao.ehAutenticavel(autenticavel))
+            return autenticavel.autenticar(senha);
+        return false
+    }
+
+    static ehAutenticavel(autenticavel){ 
+        return "autenticar" in  autenticavel && 
+            autenticavel.autenticar instanceof Function
+
+        // verifica se o método autenticar existe no objeto.
     }
 }
 
